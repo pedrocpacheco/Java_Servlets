@@ -22,6 +22,5 @@
 	}
 	%>
 	<button><a href="/Servlets_Course_1/formNewCompany.html">Create New Company</a></button>
-	<button><a href="/Servlets_Course_1/newCompany">See Last Company</a></button>
 </body>
 </html>
