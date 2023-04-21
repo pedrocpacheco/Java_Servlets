@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 public class NewCompanyServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Signing Up a New Company");
 		
 		// Passing information and Creating Page
@@ -23,6 +23,12 @@ public class NewCompanyServlet extends HttpServlet {
 		// Getting information by the Request
 		String companyName = request.getParameter("name"); // Saving it in a String | The return is always a Str
 		out.println(companyName); // Printing the String in the page
+		
+		// Working With Classes:
+		Company company = new Company(companyName.hashCode(), companyName);
+		Database database = new Database();
+		
+		database.add(company);
 		
 		
 	}
