@@ -5,6 +5,6 @@
 
 <html>
 <body>
-	Company + companyName + created!
+	Company + <% out.println(companyName); %> + created!
 </body>
 </html>
