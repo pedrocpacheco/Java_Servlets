@@ -12,7 +12,7 @@ public class Database {
 	}
 
 	
-	public static List<Company> getCompanyList() {
+	public List<Company> getCompanyList() {
 		return companyList;
 	}
 	
