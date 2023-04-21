@@ -9,12 +9,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.alura.manager.classes.Company;
+import br.com.alura.manager.classes.Database;
+
 @WebServlet("/newCompany")
 public class NewCompanyServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("Signing Up a New Company");
 		
 		String companyName = request.getParameter("name"); // Getting the Parameter and Saving in Variable
 		
@@ -24,7 +26,7 @@ public class NewCompanyServlet extends HttpServlet {
 		database.add(company); // Saving Company in Database
 		
 		// Passing to .jsp page that prints the info
-		RequestDispatcher rd = request.getRequestDispatcher("/newCompanyCreated.jsp"); 
+		RequestDispatcher rd = request.getRequestDispatcher("/newCompany.jsp"); 
 		request.setAttribute("company", company);
 		
 		rd.forward(request, response); // Passing the Request ahead

@@ -8,10 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-// To create the path to the Servlet:
-//@WebServlet is a anotation, and the urlPatterns is the url
-
-@WebServlet(urlPatterns = "/hello") 
+@WebServlet("/hello") 
 public class HelloWorldServlet extends HttpServlet{
 
 	private static final long serialVersionUID = 1L;

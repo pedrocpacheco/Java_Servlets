@@ -1,4 +1,4 @@
-package br.com.alura.manager.servlet;
+package br.com.alura.manager.classes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ public class Database {
 	}
 
 	
-	public List<Company> getCompanyList() {
+	public static List<Company> getCompanyList() {
 		return companyList;
 	}
 	
