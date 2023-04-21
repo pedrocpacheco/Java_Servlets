@@ -9,7 +9,7 @@
 <body>
 	<h1>Company Created!</h1>
 	<h2>Company Name: <%= company.getName() %> | Company ID: <%= company.getId() %></h2>
-	<button action="/Servlets_Course_1/formNewCompany.html">Create New Company</button>
-	<button action="/Servlets_Course_1/companyList>">See the CompanyList</button>
+	<button><a href="/Servlets_Course_1/formNewCompany.html">Create New Company</a></button>
+	<button><a href="/Servlets_Course_1/companyList">See the CompanyList</a></button>
 </body>
 </html>

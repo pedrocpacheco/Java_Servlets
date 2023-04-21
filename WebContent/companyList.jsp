@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <%@ page import="br.com.alura.manager.classes.Company" %>
 <%@ page import="java.util.List" %>
 
@@ -6,7 +6,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     
-<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -22,6 +21,7 @@
 	<%
 	}
 	%>
-	
+	<button><a href="/Servlets_Course_1/formNewCompany.html">Create New Company</a></button>
+	<button><a href="/Servlets_Course_1/newCompany">See Last Company</a></button>
 </body>
 </html>
