@@ -24,6 +24,8 @@ public class HelloWorldServlet extends HttpServlet{
 		out.println("<h1>Congrats, this is a Servlet!</h1>");
 		out.println("</body>");
 		out.println("</html>");
+		
+		System.out.println("Hello Servlet Running"); // Showing the process work
 	}
 	
 
