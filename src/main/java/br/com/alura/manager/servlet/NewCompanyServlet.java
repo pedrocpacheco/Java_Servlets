@@ -21,8 +21,8 @@ public class NewCompanyServlet extends HttpServlet {
 		out.println("<html><body><h1>Signing Up a New Company</h1></body></html>");
 
 		// Getting information by the Request
-		String companyName = request.getParameter("name");
-		out.println(companyName);
+		String companyName = request.getParameter("name"); // Saving it in a String | The return is always a Str
+		out.println(companyName); // Printing the String in the page
 		
 		
 	}
