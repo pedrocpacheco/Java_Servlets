@@ -1,8 +1,8 @@
 package br.com.alura.manager.servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,20 +16,18 @@ public class NewCompanyServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Signing Up a New Company");
 		
-		// Passing information and Creating Page
-		PrintWriter out = response.getWriter();
-		out.println("<html><body><h1>Signing Up a New Company</h1></body></html>");
-
-		// Getting information by the Request
-		String companyName = request.getParameter("name"); // Saving it in a String | The return is always a Str
-		out.println(companyName); // Printing the String in the page
+		String companyName = request.getParameter("name"); // Getting the Parameter and Saving in Variable
 		
-		// Working With Classes:
-		Company company = new Company(companyName.hashCode(), companyName);
-		Database database = new Database();
+		Company company = new Company(companyName.hashCode(), companyName); // Creating a Company
+		Database database = new Database(); // Creating a Database
 		
-		database.add(company);
+		database.add(company); // Saving Company in Database
 		
+		// Passing to .jsp page that prints the info
+		RequestDispatcher rd = request.getRequestDispatcher("/newCompanyCreated.jsp"); 
+		request.setAttribute("company", company);
+		
+		rd.forward(request, response); // Passing the Request ahead
 		
 	}
 
