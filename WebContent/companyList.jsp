@@ -16,7 +16,7 @@
 	<h1>Company Lists</h1>
 	
 	<c:forEach items="${companyList}" var="company">
-		<h2>Company Name: ${company.Name} | Company Id: ${company.Id}</h2>
+		<h2>Company Name: ${company.name} | Company Id: ${company.id}</h2>
 	</c:forEach>
 
 	<button><a href="/Servlets_Course_1/formNewCompany.html">Create New Company</a></button>
