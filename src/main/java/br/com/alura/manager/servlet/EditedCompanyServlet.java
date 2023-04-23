@@ -36,12 +36,8 @@ public class EditedCompanyServlet extends HttpServlet {
 		}
 		
 		Database db = new Database();
-		Company company = db.getCompanyById(id);
-		System.out.println(company.getName() + "rolou");
-		company.setName(companyName);
-		company.setDate(companyDate);
-		System.out.println(company.getName());
-	
+		db.edit(id, companyName, companyDate);
+		
 		response.sendRedirect("companyList");
 
 		
