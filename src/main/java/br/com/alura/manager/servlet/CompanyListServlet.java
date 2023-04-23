@@ -27,7 +27,7 @@ public class CompanyListServlet extends HttpServlet {
 		RequestDispatcher rd = request.getRequestDispatcher("/companyList.jsp"); // 2 -> Dipatch and ("/url")
 		
 		rd.forward(request, response); // 3 -> Finally send them
-		
 	}
+	
 
 }

@@ -20,9 +20,12 @@
 		<!-- Loop of Companys and it's infos -->
 		<c:forEach items="${companyList}" var="company">
 		<h2>Company Name: ${company.name} | Company Id: ${company.id} | Company Launch Date: <fmt:formatDate value="${company.date}" pattern="dd/MM/yyyy"/></h2>
+		<a href="/Servlets_Course_1/formNewCompany.jsp"><button>Edit</button></a>
+		<a href="/Servlets_Course_1/removeCompany?id=${company.id}"><button>Delete</button></a>
 		</c:forEach>
 		
 		<!-- Navigation Buttons -->
+		<br>
 		<a href="${linkForm}"><button>Create New Company</button></a>
 	</c:if>
 	
