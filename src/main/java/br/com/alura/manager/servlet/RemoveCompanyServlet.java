@@ -28,7 +28,7 @@ public class RemoveCompanyServlet extends HttpServlet {
 		
 		db.delete(id);
 		
-		response.sendRedirect("/Servlets_Course_1/formNewCompany.jsp");
+		response.sendRedirect("companyList");
 	}
 
 }

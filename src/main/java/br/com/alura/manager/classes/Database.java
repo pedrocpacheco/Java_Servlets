@@ -1,8 +1,9 @@
 package br.com.alura.manager.classes;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
+
+import java.util.Iterator;
 
 public class Database {
 
@@ -13,13 +14,17 @@ public class Database {
 	}
 
 	public void delete(Integer id) {
+		System.out.println(100);
+		System.out.println("ID: " + id);
 		Iterator<Company> it = companyList.iterator();
 		
-		while(it.hasNext()){
-			Company company = it.next();
-		
-			if(company.getId() == id)
-				companyList.remove(0);
+		while(it.hasNext()) {
+			Company comp = it.next();
+			
+			if(comp.getId().equals(id)) {
+				it.remove();
+			}
+			
 		}
 		
 	}
