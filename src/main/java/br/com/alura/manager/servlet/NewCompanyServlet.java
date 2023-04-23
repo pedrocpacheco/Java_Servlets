@@ -19,6 +19,7 @@ public class NewCompanyServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String companyName = request.getParameter("name"); // Getting the Parameter and Saving in Variable
+		String companyDate = request.getParameter("date");
 		
 		Company company = new Company(companyName.hashCode(), companyName); // Creating a Company
 		Database database = new Database(); // Creating a Database

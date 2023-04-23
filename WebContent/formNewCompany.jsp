@@ -11,6 +11,7 @@
 	<form action="${linkNewCompany}" method="post">
 	
 		Name: <input type="text" name="name"/>
+		Launch Date: <input type="text" name="date"/>
 		
 		<input type="submit">
 		

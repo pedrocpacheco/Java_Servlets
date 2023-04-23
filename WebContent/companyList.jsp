@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<fmt:formatDate value="${company.date}" var="companyDate"/>
 <c:url value="/formNewCompany.jsp" var="linkForm"/>
 
 
@@ -18,7 +20,7 @@
 	<c:if test="${not empty companyList }">
 		<!-- Loop of Companys and it's infos -->
 		<c:forEach items="${companyList}" var="company">
-		<h2>Company Name: ${company.name} | Company Id: ${company.id} | Company Launch Date: ${company.date} </h2>
+		<h2>Company Name: ${company.name} | Company Id: ${company.id} | Company Launch Date: <fmt:formatDate value="${company.date}" pattern="dd/MM/yyyy"/></h2>
 		</c:forEach>
 		
 		<!-- Navigation Buttons -->
