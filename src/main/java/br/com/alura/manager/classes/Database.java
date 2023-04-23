@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Iterator;
 
 public class Database {
 
@@ -17,10 +16,7 @@ public class Database {
 	}
 
 	public void delete(Integer id) {
-		System.out.println(100);
-		System.out.println("ID: " + id);
-		Company removedCompany = idToCompany.get(id);
-		companyList.remove(removedCompany);
+		companyList.remove(idToCompany.get(id));
 		
 	}
 	
