@@ -37,6 +37,8 @@ public class NewCompanyServlet extends HttpServlet {
 		Database database = new Database(); // Creating a Database
 		
 		database.add(company); // Saving Company in Database
+
+		request.setAttribute("company", company);
 		
 		response.sendRedirect("companyList");
 		

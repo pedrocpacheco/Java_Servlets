@@ -10,8 +10,8 @@
 <body>   		 <!-- Calling the var -->
 	<form action="${linkNewCompany}" method="post">
 	
-		Name: <input type="text" name="name"/>
-		Launch Date: <input type="text" name="date"/>
+		Name: <input type="text" name="name" placeholder="Your Company's Name"/>
+		Launch Date: <input type="text" name="date" placeholder="00/00/0000"/>
 		
 		<input type="submit">
 		
