@@ -18,7 +18,7 @@
 	<c:if test="${not empty companyList }">
 		<!-- Loop of Companys and it's infos -->
 		<c:forEach items="${companyList}" var="company">
-		<h2>Company Name: ${company.name} | Company Id: ${company.id}</h2>
+		<h2>Company Name: ${company.name} | Company Id: ${company.id} | Company Launch Date: ${company.date} </h2>
 		</c:forEach>
 		
 		<!-- Navigation Buttons -->
