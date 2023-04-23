@@ -23,5 +23,9 @@ public class Database {
 		return companyList;
 	}
 	
+	public Company getCompanyById(Integer id) {
+		return idToCompany.get(id);
+	}
+	
 	
 }
