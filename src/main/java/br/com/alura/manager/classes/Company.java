@@ -8,9 +8,10 @@ public class Company {
 	private String name;
 	private Date date = new Date();
 	
-	public Company(Integer id, String name) {
+	public Company(Integer id, String name, Date date) {
 		this.id = id;
 		this.name = name;
+		this.date = date;
 	}
 	
 	public Integer getId() {
