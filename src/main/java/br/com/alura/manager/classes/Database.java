@@ -16,8 +16,7 @@ public class Database {
 	}
 
 	public void delete(Integer id) {
-		companyList.remove(idToCompany.get(id));
-		
+		companyList.remove(idToCompany.get(id));	
 	}
 	
 	public static List<Company> getCompanyList() {
