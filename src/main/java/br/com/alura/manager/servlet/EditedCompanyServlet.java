@@ -23,6 +23,7 @@ public class EditedCompanyServlet extends HttpServlet {
 		
 		String companyName = request.getParameter("name");
 		Integer id = Integer.parseInt(request.getParameter("id"));
+		System.out.println(id);
 		String strCompanyDate = request.getParameter("date");
 	
 		Date companyDate = null; // Creating before try-catch block to be used after it
@@ -35,7 +36,14 @@ public class EditedCompanyServlet extends HttpServlet {
 		}
 		
 		Database db = new Database();
-		db.add(new Company(id, companyName, companyDate));
+		Company company = db.getCompanyById(id);
+		System.out.println(company.getName() + "rolou");
+		company.setName(companyName);
+		company.setDate(companyDate);
+		System.out.println(company.getName());
+	
+		response.sendRedirect("companyList");
+
 		
 	}
 

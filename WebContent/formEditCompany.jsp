@@ -16,6 +16,7 @@
 	
 		Name: <input type="text" name="name" placeholder="${company.name}"/>
 		Launch Date: <input type="text" name="date" placeholder="<fmt:formatDate value="${company.date}" pattern="dd/MM/yyyy"/>"/>
+		<input type="hidden" name="id" value="${company.id}">
 		
 		<input type="submit">
 		

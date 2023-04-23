@@ -26,6 +26,10 @@ public class Company {
 		return date;
 	}
 	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
 	public void setDate(Date date) {
 		this.date = date;
 	}
