@@ -14,7 +14,7 @@
 		<a href="${linkList}"><button>See CompanyList</button></a>
 	</c:if>
 	
-	<!-- Info Printef if Company Sended doesn't has value -->
+	<!-- Info Printed if Company Sended doesn't has value -->
 	<c:if test="${empty company}">
 		<h1>No Company Created!</h1>
 		<h2>Check if you used the Form to send the Company info!</h2>

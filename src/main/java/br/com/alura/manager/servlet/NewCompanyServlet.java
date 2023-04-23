@@ -38,11 +38,13 @@ public class NewCompanyServlet extends HttpServlet {
 		
 		database.add(company); // Saving Company in Database
 		
-		// Passing to .jsp page that prints the info
-		RequestDispatcher rd = request.getRequestDispatcher("/newCompany.jsp"); 
-		request.setAttribute("company", company);
+		response.sendRedirect("companyList");
 		
-		rd.forward(request, response); // Passing the Request ahead
+		// Passing to .jsp page that prints the info
+		// RequestDispatcher rd = request.getRequestDispatcher("/companyList"); 
+		// request.setAttribute("company", company);
+		
+		//rd.forward(request, response); // Passing the Request ahead
 		
 	}
 
