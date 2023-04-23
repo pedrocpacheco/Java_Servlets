@@ -1,6 +1,8 @@
 package br.com.alura.manager.servlet;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -22,6 +24,14 @@ public class ShowCompany extends HttpServlet {
 		Database db = new Database();
 		
 		Company company = db.getCompanyById(id);
+		System.out.println(company.getName());
+		
+		request.setAttribute("company", company); // Defining what the dispatcher will send
+		
+		RequestDispatcher rd = request.getRequestDispatcher("/formEditCompany.jsp"); // Sending the dispatcher
+		
+		rd.forward(request, response);
+		
 		
 	}
 
