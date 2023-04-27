@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.alura.manager.classes.Company;
-import br.com.alura.manager.classes.Database;
+import br.com.alura.manager.model.Company;
+import br.com.alura.manager.model.Database;
 
 @WebServlet("/showCompany")
 public class ShowCompany extends HttpServlet {

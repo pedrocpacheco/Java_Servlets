@@ -1,4 +1,4 @@
-package br.com.alura.manager.classes;
+package br.com.alura.manager.model;
 
 import java.util.Date;
 

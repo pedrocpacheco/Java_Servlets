@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.alura.manager.classes.Database;
+import br.com.alura.manager.model.Database;
 
 /**
  * Servlet implementation class RemoveCompanyServlet
